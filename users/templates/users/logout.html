@@ -6,7 +6,7 @@
     <div class="border-top pt-3">
       <h2 class="text-muted">
         <!-- <center><a href="{% url 'login' %}" class="ml-2">Log in again </a></center>-->
-        <form method="post" action="{% url 'login' %}">
+        <form action="{% url 'login' %}">
             {% csrf_token %}
             <center><button type="submit" class="btn btn-outline-info">LogIn</button>
           </form>
