@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <h2><center>You have been logged out!</h2></center>
+  <div class="content-section">
+    <div class="border-top pt-3">
+      <h2 class="text-muted">
+        <!-- <center><a href="{% url 'login' %}" class="ml-2">Log in again </a></center>-->
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <center><button type="submit" class="btn btn-outline-info">LogIn</button>
+          </form>
+      </h2>
+    </div>
+  </div>
+{% endblock content %}
